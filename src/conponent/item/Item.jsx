@@ -3,7 +3,7 @@ import "./Item.css";
 const Item = ({ item }) => {
   const { id, image, name, new_price, old_price } = item;
   return (
-    <div className="item">
+    <div className="item mb">
       <img src={image} alt="" />
       <p>{name}</p>
       <div className="item_prices">

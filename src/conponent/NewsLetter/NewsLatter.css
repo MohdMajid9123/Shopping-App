@@ -1,0 +1,53 @@
+.NewsLatter {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  padding: 0px 40px;
+  background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+  gap: 30px;
+  border: 1px solid #000;
+  margin-bottom: 100px;
+}
+.NewsLatter h1 {
+  color: #454545;
+  font-size: 40px;
+  font-weight: 600;
+}
+.NewsLatter p {
+  color: #454545;
+  font-size: 20px;
+}
+.NewsLatter div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  width: 730px;
+  height: 70px;
+  border-radius: 80px;
+  border: 1px solid #e3e3e3;
+}
+
+.NewsLatter input {
+  width: 500px;
+  margin-left: 30px;
+  border: none;
+  outline: none;
+  color: #616161;
+  font-family: Poppins;
+  font-size: 16px;
+}
+.NewsLatter div button {
+  width: 210px;
+  height: 70px;
+  border-radius: 80px;
+  background: black;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  border: none;
+  outline: none;
+}
