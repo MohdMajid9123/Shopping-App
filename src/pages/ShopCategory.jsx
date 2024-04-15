@@ -10,8 +10,12 @@ const ShopCategory = (props) => {
 
   return (
     <div className="shop_category">
-      <img src={props.banner} width="100%" alt={props.banner} />
-      <div className="shop_category_index_Sort">
+      <img
+        src={props.banner}
+        className="shopcategory_banner"
+        alt={props.banner}
+      />
+      <div className="shopcategory_indexSort">
         <p>
           <span>Showing 1-12</span> out of 36 products
         </p>
@@ -24,9 +28,11 @@ const ShopCategory = (props) => {
           if (props.category === item.category) {
             return <Item key={index} item={item} />;
           } else {
+            return null;
           }
         })}
       </div>
+      <div className="shopcategory_loadmore">Explore More</div>
     </div>
   );
 };
