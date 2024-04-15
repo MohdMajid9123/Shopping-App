@@ -1,7 +1,34 @@
-import React from "react";
+import React, { useContext } from "react";
+import "./CSS/ShopCategory.css";
+import { ShopContact } from "../context/ShopContact";
+import dropdown_icon from "../conponent/Assets/dropdown_icon.png";
+import all_product from "../conponent/Assets/all_product";
+import Item from "../conponent/item/Item";
 
-const ShopCategory = () => {
-  return <div>ShopCategory</div>;
+const ShopCategory = (props) => {
+  const { contextValue } = useContext(ShopContact);
+
+  return (
+    <div className="shop_category">
+      <img src={props.banner} width="100%" alt={props.banner} />
+      <div className="shop_category_index_Sort">
+        <p>
+          <span>Showing 1-12</span> out of 36 products
+        </p>
+        <div className="shopcategory_sort">
+          Sort by <img src={dropdown_icon} alt={dropdown_icon} />
+        </div>
+      </div>
+      <div className="shopcategory_products">
+        {all_product.map((item, index) => {
+          if (props.category === item.category) {
+            return <Item key={index} item={item} />;
+          } else {
+          }
+        })}
+      </div>
+    </div>
+  );
 };
 
 export default ShopCategory;
