@@ -1,4 +1,5 @@
 import React from "react";
+import "./CSS/LoginSingup.css";
 
 const LoginSingup = () => {
   return (
@@ -12,7 +13,7 @@ const LoginSingup = () => {
         </div>
         <button>Continue</button>
         <p className="loginSingup_login">
-          Already have an Accout ? <span> Login </span>
+          Already have an Accout ? <span> Login Here </span>
         </p>
         <div className="loginSingup_agree">
           <input type="checkbox" name="" id="" />
