@@ -1,13 +1,16 @@
 .item {
   min-width: 150px;
   width: 200px;
-  border: 1px solid #000;
 }
 .item img {
   width: 100%;
 }
 .item p {
   margin: 6px 0;
+  color: black;
+}
+.item p:hover {
+  color: #eb4836;
 }
 .item_prices {
   display: flex;

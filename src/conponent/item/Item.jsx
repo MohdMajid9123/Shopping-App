@@ -9,7 +9,9 @@ const Item = ({ item }) => {
         <img src={image} alt="" />
       </Link>
 
-      <p>{name}</p>
+      <Link to={`/product/${id}`}>
+        <p>{name}</p>
+      </Link>
       <div className="item_prices">
         <div className="item_price_new">{new_price}</div>
         <div className="item_price_old">{old_price}</div>

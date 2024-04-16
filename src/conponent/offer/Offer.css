@@ -1,9 +1,8 @@
 .offer {
-  border: 1px solid #000;
   width: 80%;
   display: flex;
   justify-content: space-between;
-  margin: auto auto;
+  margin: 80px auto;
   background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
 }
 .offer_left {

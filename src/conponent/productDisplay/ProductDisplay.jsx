@@ -6,6 +6,7 @@ import star_icon from "../Assets/star_icon.png";
 
 const ProductDisplay = (props) => {
   const { product } = props;
+  console.log(product);
   return (
     <div className="productDisplay">
       <div className="productDisplay_left">
@@ -60,7 +61,7 @@ const ProductDisplay = (props) => {
         </div>
         <button>ADD TO CART</button>
         <p className="productDisplay_right_category">
-          <span>Cateogry :</span> Woman T-Shirt,Crop Top
+          <span>Cateogry :</span> {product.category}
         </p>
         <p className="productDisplay_right_category">
           <span>Tags :</span> Modern , Letast
