@@ -3,13 +3,18 @@ import "./Item.css";
 import { Link } from "react-router-dom";
 const Item = ({ item }) => {
   const { id, image, name, new_price, old_price } = item;
+
+  const handler = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="item">
       <Link to={`/product/${id}`}>
-        <img src={image} alt="" />
+        <img onClick={handler} src={image} alt="" />
       </Link>
 
-      <Link to={`/product/${id}`}>
+      <Link to={`/product/${id}`} onClick={handler}>
         <p>{name}</p>
       </Link>
       <div className="item_prices">
