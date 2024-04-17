@@ -23,3 +23,14 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+@media (max-width: 1024px) {
+  .popular h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 800px) {
+  .popular h1 {
+    font-size: 25px;
+  }
+}

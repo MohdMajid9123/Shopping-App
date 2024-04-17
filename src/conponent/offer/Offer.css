@@ -21,6 +21,7 @@
   color: #171717;
   font-size: 22px;
   font-weight: 600;
+  margin-top: 10px;
 }
 .offer_left button {
   width: 282px;
@@ -42,4 +43,21 @@
 .offer_right img {
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .offer_left h1 {
+    font-size: 35px;
+  }
+  .offer_left p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 800px) {
+  .offer_left h1 {
+    font-size: 26px;
+  }
+  .offer_left p {
+    font-size: 12px;
+  }
 }

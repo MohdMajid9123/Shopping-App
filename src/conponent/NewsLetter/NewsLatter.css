@@ -5,7 +5,7 @@
   align-items: center;
   flex-direction: column;
   margin: auto;
-  padding: 0px 40px;
+  padding: 25px 40px;
   background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
   gap: 30px;
   margin-bottom: 100px;
@@ -49,4 +49,52 @@
   color: white;
   border: none;
   outline: none;
+}
+
+@media (max-width: 1024px) {
+  .NewsLatter h1 {
+    font-size: 30px;
+  }
+  .NewsLatter p {
+    font-size: 20px;
+  }
+  .NewsLatter div {
+    width: 600px;
+    height: 60px;
+  }
+  .NewsLatter div button {
+    height: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  .NewsLatter h1 {
+    font-size: 20px;
+  }
+  .NewsLatter p {
+    font-size: 15px;
+  }
+  .NewsLatter div {
+    width: 500px;
+    height: 50px;
+  }
+  .NewsLatter div button {
+    height: 50px;
+  }
+}
+@media (max-width: 400px) {
+  .NewsLatter h1 {
+    font-size: 15px;
+  }
+  .NewsLatter p {
+    font-size: 10px;
+  }
+  .NewsLatter div {
+    width: 300px;
+    height: 30px;
+  }
+  .NewsLatter div button {
+    height: 30px;
+    font-size: 13px;
+  }
 }
