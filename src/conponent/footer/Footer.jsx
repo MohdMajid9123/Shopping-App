@@ -11,7 +11,7 @@ const Footer = () => {
     <div className="footer">
       <div className="footer_logo">
         <img src={footer_logo} alt={footer_logo} />
-        <p>SHOPPER</p>
+        <h1>SHOPPER</h1>
       </div>
       <ul className="footer_links">
         <li>Company</li>
@@ -33,7 +33,7 @@ const Footer = () => {
       </div>
       <div className="footer_copyright">
         <hr />
-        <p>Copyright @ 2023 - All Right Reserve by Md Majid</p>
+        <p>Copyright @ 2024 - All Right Reserve by Md Majid</p>
       </div>
     </div>
   );

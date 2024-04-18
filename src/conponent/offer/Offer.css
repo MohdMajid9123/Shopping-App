@@ -61,6 +61,10 @@
   .offer_left p {
     font-size: 12px;
   }
+  .offer_left button {
+    width: 150px;
+    height: 30px;
+  }
 }
 @media (max-width: 640px) {
   .offer_right {

@@ -53,6 +53,15 @@
   height: 3px;
   background: #c7c7c7;
 }
+@media (max-width: 800px) {
+  .footer_logo h1 {
+    font-size: 25px;
+  }
+  .footer_icons_container {
+    padding: 6px;
+    padding-bottom: 4px;
+  }
+}
 @media (max-width: 600px) {
   .footer_links {
     gap: 30px;
@@ -71,12 +80,19 @@
   .footer_links {
     gap: 10px;
   }
-  .footer_logo p {
+  .footer_logo img {
+    height: 60px;
+  }
+  .footer_logo h1 {
     font-weight: 500;
     font-size: 20px;
   }
   .footer_copyright {
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 600;
+  }
+  .footer_links {
+    font-size: 13px;
+    gap: 5px;
   }
 }

@@ -87,12 +87,16 @@
   }
   .NewsLatter div input {
     width: 190px;
-    margin-left: 0px;
+    margin-left: 5px;
     font-size: 14px;
   }
   .NewsLatter div button {
     height: 30px;
     font-size: 13px;
+    width: 80px;
+  }
+  .NewsLatter div button span {
+    display: none;
   }
 }
 @media (max-width: 400px) {
@@ -101,16 +105,5 @@
   }
   .NewsLatter p {
     font-size: 10px;
-  }
-  /* .NewsLatter div {
-    width: 300px;
-    height: 30px;
-  } */
-  /* .NewsLatter div button {
-    height: 30px;
-    font-size: 13px;
-  } */
-  .NewsLatter div button span {
-    display: none;
   }
 }

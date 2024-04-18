@@ -8,3 +8,9 @@
   text-transform: capitalize;
   font-weight: 600;
 }
+
+@media (max-width: 700px) {
+  .breadcrum {
+    flex-wrap: wrap;
+  }
+}

@@ -27,3 +27,20 @@
   padding: 40px;
   padding-bottom: 70px;
 }
+
+/* media query only */
+
+@media (max-width: 1024px) {
+  .descriptionBox {
+    margin: 40px;
+  }
+}
+@media (max-width: 400px) {
+  .descriptionBox_nav_box,
+  .descriptionBox_navigator {
+    font-size: 14px;
+  }
+  .descriptionBox_description p:nth-child(1) {
+    display: none;
+  }
+}

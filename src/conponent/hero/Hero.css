@@ -58,6 +58,12 @@
   .hero_left {
     padding-left: 140px;
   }
+  .hero h1 {
+    font-size: 45px;
+  }
+  .hero h2 {
+    font-size: 35px;
+  }
   .hand_Icon img {
     width: 60px;
   }
@@ -69,7 +75,7 @@
     font-size: 18px;
   }
   .hero_right img {
-    width: 500px;
+    width: 400px;
   }
 }
 
@@ -93,6 +99,12 @@
   .hero_left {
     padding-left: 30px;
   }
+  .hero h1 {
+    font-size: 20px;
+  }
+  .hero h2 {
+    font-size: 16px;
+  }
   .hand_Icon img {
     width: 30px;
   }
@@ -102,7 +114,7 @@
     font-size: 13px;
   }
   .hero_right img {
-    width: 300px;
+    width: 250px;
   }
 }
 
