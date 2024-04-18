@@ -30,7 +30,7 @@
   border: 1px solid #e3e3e3;
 }
 
-.NewsLatter input {
+.NewsLatter div input {
   width: 500px;
   margin-left: 30px;
   border: none;
@@ -78,8 +78,21 @@
     width: 500px;
     height: 50px;
   }
+  .NewsLatter div {
+    width: 300px;
+    height: 30px;
+  }
   .NewsLatter div button {
     height: 50px;
+  }
+  .NewsLatter div input {
+    width: 190px;
+    margin-left: 0px;
+    font-size: 14px;
+  }
+  .NewsLatter div button {
+    height: 30px;
+    font-size: 13px;
   }
 }
 @media (max-width: 400px) {
@@ -89,12 +102,15 @@
   .NewsLatter p {
     font-size: 10px;
   }
-  .NewsLatter div {
+  /* .NewsLatter div {
     width: 300px;
     height: 30px;
-  }
-  .NewsLatter div button {
+  } */
+  /* .NewsLatter div button {
     height: 30px;
     font-size: 13px;
+  } */
+  .NewsLatter div button span {
+    display: none;
   }
 }

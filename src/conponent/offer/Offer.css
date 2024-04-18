@@ -4,6 +4,7 @@
   justify-content: space-between;
   margin: 80px auto;
   background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+  padding: 20px 0;
 }
 .offer_left {
   flex: 1;
@@ -59,5 +60,18 @@
   }
   .offer_left p {
     font-size: 12px;
+  }
+}
+@media (max-width: 640px) {
+  .offer_right {
+    display: none;
+  }
+  .offer {
+    text-align: center;
+  }
+  .offer_left button {
+    width: 170px;
+    height: 30px;
+    margin: 30px auto;
   }
 }

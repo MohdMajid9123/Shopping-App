@@ -4,7 +4,7 @@ import "./Navbar.css";
 //import image
 import logo from "../Assets/logo.png";
 import cart from "../Assets/cart_icon.png";
-import dropDown_Icon from "../Assets/dropdown_icon.png";
+import dropDown_Icon from "../Assets/drop_down.png";
 import { Link } from "react-router-dom";
 import { ShopContact } from "../../context/ShopContact";
 
