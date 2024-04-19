@@ -37,3 +37,18 @@
   font-size: 18px;
   font-weight: 500;
 }
+
+@media (max-width: 400px) {
+  .shopcategory_sort {
+    display: none;
+  }
+  .shopcategory_indexSort {
+    margin: 10px;
+    justify-content: center;
+  }
+  .shopcategory_loadmore {
+    width: 160px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
