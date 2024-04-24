@@ -17,11 +17,11 @@ const DiscriptionBox = () => {
           laboriosam nobis. Delectus facilis nam maxime, voluptate nobis
           necessitatibus minima alias repellat?
         </p>
-        <p>
+        {/* <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque est,
           quia fugiat repellendus odit repudiandae provident omnis facilis
           facere voluptate?
-        </p>
+        </p> */}
       </div>
     </div>
   );
