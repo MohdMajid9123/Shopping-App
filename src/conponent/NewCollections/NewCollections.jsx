@@ -5,8 +5,8 @@ import Item from "../item/Item";
 const NewCollections = () => {
   const [new_collections, setNew_Collection] = useState([]);
 
-  useEffect(async () => {
-    await fetch("http://localhost:4000/newCollection")
+  useEffect(() => {
+    fetch("http://localhost:4000/newCollection")
       .then((res) => res.json())
       .then((data) => {
         setNew_Collection(data);
