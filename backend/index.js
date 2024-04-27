@@ -246,6 +246,15 @@ app.get("/newCollection", async (req, res) => {
   res.send(newCollection);
 });
 
+// creating endpoint for Popular in women section data
+app.get("/poularWomen", async (req, res) => {
+  let products = await Product.find({ category: "women" });
+
+  let popular_women = products.slice(0, 4);
+  console.log("Popular women fetch");
+  res.send(popular_women);
+});
+
 // my server port or url here
 app.listen(port, (error) => {
   if (!error) {
