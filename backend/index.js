@@ -1,6 +1,8 @@
 const port = 4000;
 const express = require("express");
 
+const jwt = require("jsonwebtoken");
+
 const app = express();
 
 const mongoose = require("mongoose");
@@ -10,14 +12,34 @@ const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
 
-app.use(express.json());
-app.use(cors());
-
 // database connection with mongodb
 
 mongoose.connect(
   "mongodb+srv://mohdmajid9123:shop123@cluster0.qjrtojy.mongodb.net/shopping-app"
 );
+
+// app.use(express.json());
+
+app.use(express.json());
+app.use((err, req, res, next) => {
+  if (err instanceof SyntaxError && err.status === 400 && "body" in err) {
+    console.error(err);
+    return res.status(400).send({
+      status: 400,
+      message: "Bad request. The JSON data is not properly formatted.",
+    }); // Sending error response
+  }
+  next();
+});
+app.use(cors());
+
+// app.use(cors());
+
+app.use(express.raw({ type: "application/json" }));
+app.use((req, res, next) => {
+  console.log(req.body.toString()); // Logging the body as string
+  next();
+});
 
 // api creation
 
@@ -135,6 +157,86 @@ app.get("/allProducts", async (req, res) => {
   console.log("all Products gotted");
   res.send(products);
 });
+
+//shema creating for user model
+const Users = mongoose.model("Users", {
+  name: {
+    type: String,
+  },
+  email: {
+    type: String,
+    unique: true,
+  },
+  password: {
+    type: String,
+  },
+  cartData: {
+    type: Object,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
+// creating endpoint for registering the user
+
+app.post("/signup", async (req, res) => {
+  let check = await Users.findOne({ email: req.body.email });
+
+  if (check) {
+    return res.status(400).json({
+      success: false,
+      error: "existing user found with same email address",
+    });
+  }
+  let cart = {};
+  for (let i = 0; i < 300; i++) {
+    cart[i] = 0;
+  }
+  const user = new Users({
+    name: req.body.username,
+    email: req.body.email,
+    password: req.body.password,
+    cartData: cart,
+  });
+
+  await user.save();
+
+  const data = {
+    user: {
+      id: user.id,
+    },
+  };
+
+  const token = jwt.sign(data, "secret_ecom");
+
+  res.json({ success: true, token });
+});
+
+//creating endpoint for user login
+
+app.post("/login", async (req, res) => {
+  let user = await Users.findOne({ email: req.body.email });
+  if (user) {
+    const passCompare = req.body.password === user.password;
+    if (passCompare) {
+      const data = {
+        user: {
+          id: user.id,
+        },
+      };
+      const token = jwt.sign(data, "secret_ecom");
+      res.json({ success: true, token });
+    } else {
+      res.json({ success: false, error: "wrong password" });
+    }
+  } else {
+    res.json({ success: false, errors: "wrong email id" });
+  }
+});
+
+// my server port or url here
 app.listen(port, (error) => {
   if (!error) {
     console.log("server Running on port :- " + port);
