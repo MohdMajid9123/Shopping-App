@@ -236,6 +236,16 @@ app.post("/login", async (req, res) => {
   }
 });
 
+// creating endpoint for NewConnnection data
+
+app.get("/newCollection", async (req, res) => {
+  let products = await Product.find({});
+
+  let newCollection = products.slice(1).slice(-8);
+  console.log("New Collection fetch");
+  res.send(newCollection);
+});
+
 // my server port or url here
 app.listen(port, (error) => {
   if (!error) {
